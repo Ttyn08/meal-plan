@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Meals </title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/774016f233.js" crossorigin="anonymous"></script>
+</head>
+    <div class="app-container">
+        <aside class="sidebar" id="mySidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Foodorithm</h1>
+                <i class="fa-solid fa-bars menu-icon"></i>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-light fa-table-cells-large"></i> <span>Daily Log</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-light fa-bullseye"></i> <span>Goals</span></a></li>
+                    <li><a href="#" class="active"><i class="fa-solid fa-light fa-bowl-rice"></i> <span>Meals</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-group"></i> <span>Connect</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="user-avatar">T</div>
+                <span>T Anh</span>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="main-header">
+                <h2 class="page-title">Plan Meals</h2>
+                <button class="create-btn" id="create-plan-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Create</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+            </section>
+
+            <section class="page-content">
+                <nav class="plan-nav">
+                    <a href="#" class="plan-nav-item active utensils">
+                        <i class="fa-solid fa-regular fa-utensils"></i>
+                        <span>My Foods, Recipes, Meals</span>
+                    </a>
+                    <a href="#" class="plan-nav-item bowl-food">
+                        <i class="fa-solid fa-light fa-bowl-food"></i>
+                        <span>Premium Recipes</span>
+                    </a>
+                    <a href="#" class="plan-nav-item heart">
+                        <i class="fa-solid fa-regular fa-heart"></i>
+                        <span>My Favorites</span>
+                    </a>
+                    <a href="./saveMealPlan.html" class="plan-nav-item calendar-days">
+                        <i class="fa-solid fa-light fa-calendar-days"></i>
+                        <span>Meal Planning</span>
+                    </a>
+                    <a href="./shop_list.html" class="plan-nav-item cart-shopping">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Shopping List</span>
+                    </a>
+                    <a href="#" class="plan-nav-item print">
+                        <i class="fa-solid fa-print"></i>
+                        <span>Print Weekly Meals</span>
+                    </a>
+                </nav>
+
+                <div class="recipe-categories">
+                    <h3>Premium Recipes</h3>
+                    <div class="category-list">
+                        <a href="#" class="category-item">
+                            <img src="https://media.theeverygirl.com/wp-content/uploads/2024/01/easy-meal-prep-recipes-2025-the-everygirl-2.jpg" 
+                            alt="Quick & Easy">
+                            <span>Quick & Easy</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <img src="https://foodbornewellness.com/wp-content/uploads/2025/01/Breakfast-Charcuterie-Board.jpg" alt="Breakfast and Brunch">
+                            <span>Breakfast and Brunch</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <img src="https://simply-delicious-food.com/wp-content/uploads/2018/07/mexican-lunch-bowls-3.jpg" alt="Lunch">
+                            <span>Lunch</span>
+                        </a>
+                            <a href="#" class="category-item">
+                            <img src="https://images.fosterwebmarketing.com/paestateplanners.com/thanksgiving%20turkey(1).jpg" alt="Main Course">
+                            <span>Main Course</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <img src="https://images.squarespace-cdn.com/content/v1/568bea5540667a54498bf784/1698418621607-91888NLWM0GSP5RQU410/Lux-still-life-food-drink-photographyOCT-TEASER.jpg" alt="Beverage">
+                            <span>Beverage</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <img src="https://www.foodandwine.com/thmb/IuZPWAXBp4YaT9hn1YLHhuijT3k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-big-italian-salad-hero-83e6ea846722478f8feb1eea33158b00.jpg" alt="Salad">
+                            <span>Salad</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <img src="https://them.net/wp-content/uploads/2024/05/salty-snacks-pretzels-chips-crackers.webp" alt="Snack">
+                            <span>Snack</span>
+                        </a>
+                        <a href="#" class="category-item">
+                            <img src="https://tatyanaseverydayfood.com/wp-content/uploads/2022/06/Mixed-Fruit-Mille-Feuille-with-Mascarpone-Cream-recipe-3.jpg" alt="Snack">
+                            <span>Dessert</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="recipe-section">
+                    <div class="section-header">
+                        <h4>Newest Premium Recipes</h4>
+                        <a href="#" class="view-all">VIEW ALL</a>
+                    </div>
+                    
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev-btn" type="button" aria-label="Previous">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+
+                        <div class="carousel-wrapper">
+                            <div class="recipe-carousel">
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-btn next-btn" type="button" aria-label="Next">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="recipe-section">
+                    <div class="section-header">
+                        <h4><strong>Trending</strong> Prenium Recipes</h4>
+                        <a href="#" class="view-all">VIEW ALL</a>
+                    </div>
+                    
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev-btn" type="button" aria-label="Previous">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+
+                        <div class="carousel-wrapper">
+                            <div class="recipe-carousel">
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-btn next-btn" type="button" aria-label="Next">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="recipe-section">
+                    <div class="section-header">
+                        <h4>Coconut: Sweet, Savory, Sensational!</h4>
+                        <a href="#" class="view-all">VIEW ALL</a>
+                    </div>
+                    
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev-btn" type="button" aria-label="Previous">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+
+                        <div class="carousel-wrapper">
+                            <div class="recipe-carousel">
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-btn next-btn" type="button" aria-label="Next">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="recipe-section">
+                    <div class="section-header">
+                        <h4>On The Grill</h4>
+                        <a href="#" class="view-all">VIEW ALL</a>
+                    </div>
+                    
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev-btn" type="button" aria-label="Previous">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+
+                        <div class="carousel-wrapper">
+                            <div class="recipe-carousel">
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-btn next-btn" type="button" aria-label="Next">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="recipe-section">
+                    <div class="section-header">
+                        <h4>Icy Bites, Keto Delights</h4>
+                        <a href="#" class="view-all">VIEW ALL</a>
+                    </div>
+                    
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev-btn" type="button" aria-label="Previous">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+
+                        <div class="carousel-wrapper">
+                            <div class="recipe-carousel">
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="https://s3.amazonaws.com/grazecart/tierraverdefarms/images/1739289906_67ab7532891ad.jpg" alt="Keto Chicken Dumplings" srcset="">
+                                    <div class="image-overlay">
+                                        <h1 class="card-text">Keto Chicken Dumplings</h1>
+                                        <div class="rating">
+                                            <div>★★★★★</div>
+                                            <i class="fa-light fa-solid fa-trophy"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-btn next-btn" type="button" aria-label="Next">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/home.js"></script>
+</body>
+</html>

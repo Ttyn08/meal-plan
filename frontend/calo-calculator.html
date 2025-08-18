@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Calo Bữa Ăn</title>
+    <link rel="stylesheet" href="css/calo-calculator.css">
+    <link rel="shortcut icon" href="./image/logo/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></head>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="#hero" class="header-logo">
+                <div class="header-logo-img">
+                    <img src="./image/logo/menu.png" alt="img-logo" srcset="">
+                </div>
+                <p>Foodorithm</p>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar" id="main-navbar">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="calo-calculator.html">Calculator Calor</a></li>
+                <li><a class="nav-link nav-button" href="signin.html">Sign in</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <h1>Công Cụ Tính Calo Cần Thiết</h1>
+            <form id="calorie-form">
+                <div class="form-group">
+                    <label>Giới tính:</label>
+                    <div class="gender-options">
+                        <label><input type="radio" name="gender" value="male" required> Nam</label>
+                        <label><input type="radio" name="gender" value="female" required> Nữ</label>
+                    </div>
+                </div>
+
+                <div id="female-options">
+                    <div class="form-group">
+                        <label for="female-status">Tình trạng đặc biệt (nếu có):</label>
+                        <select id="female-status">
+                            <option value="0">Không có</option>
+                            <option value="0">Mang thai 3 tháng đầu</option>
+                            <option value="340">Mang thai 3 tháng giữa</option>
+                            <option value="450">Mang thai 3 tháng cuối</option>
+                            <option value="500">Đang cho con bú</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Tuổi:</label>
+                    <input type="number" id="age" placeholder="Nhập tuổi của bạn" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="weight">Cân nặng (kg):</label>
+                    <input type="number" id="weight" placeholder="Ví dụ: 65" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="height">Chiều cao (cm):</label>
+                    <input type="number" id="height" placeholder="Ví dụ: 170" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="activity">Mức độ hoạt động thể chất:</label>
+                    <select id="activity" required>
+                        <option value="1.2">Ít vận động (không thường xuyên luyện tập)</option>
+                        <option value="1.375">Vận động nhẹ (tập 1-3 lần/tuần)</option>
+                        <option value="1.55">Vận động vừa (tập 3-5 lần/tuần)</option>
+                        <option value="1.725">Vận động nhiều (tập 6-7 lần/tuần)</option>
+                        <option value="1.9">Vận động rất nhiều (tập luyện nặng 2 lần/ngày)</option>
+                    </select>
+                </div>
+                <button type="submit">Tính Toán Calo</button>
+            </form>
+            <div id="results"></div>
+        </div>
+    </main>
+    
+    <footer id="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 AuraGen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/calo-calculator.js"></script>
+
+</body>
+</html>

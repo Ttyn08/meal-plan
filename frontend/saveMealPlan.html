@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Meal Plans</title>
+    <link rel="stylesheet" href="./css/saveMealPlan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/774016f233.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar" id="mySidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Foodorithm</h1>
+                <i class="fa-solid fa-bars menu-icon"></i>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-light fa-table-cells-large"></i> <span>Daily Log</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-light fa-bullseye"></i> <span>Goals</span></a></li>
+                    <li><a href="#" class="active"><i class="fa-solid fa-light fa-bowl-rice"></i> <span>Meals</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-group"></i> <span>Connect</span></a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="user-avatar">T</div>
+                <span>T Anh</span>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="main-header">
+                <h2 class="page-title">Plan Meals</h2>
+                <button class="create-btn" id="create-plan-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Create</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+            </section>
+
+            <section class="page-content">
+                <nav class="plan-nav">
+                    <a href="./home.html" class="plan-nav-item active utensils">
+                        <i class="fa-solid fa-regular fa-utensils"></i>
+                        <span>My Foods, Recipes, Meals</span>
+                    </a>
+                    <a href="#" class="plan-nav-item bowl-food">
+                        <i class="fa-solid fa-light fa-bowl-food"></i>
+                        <span>Premium Recipes</span>
+                    </a>
+                    <a href="#" class="plan-nav-item heart">
+                        <i class="fa-solid fa-regular fa-heart"></i>
+                        <span>My Favorites</span>
+                    </a>
+                    <a href="./saveMealPlan.html" class="plan-nav-item calendar-days">
+                        <i class="fa-solid fa-light fa-calendar-days"></i>
+                        <span>Meal Planning</span>
+                    </a>
+                    <a href="./shop_list.html" class="plan-nav-item cart-shopping">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Shopping List</span>
+                    </a>
+                    <a href="#" class="plan-nav-item print">
+                        <i class="fa-solid fa-print"></i>
+                        <span>Print Weekly Meals</span>
+                    </a>
+                </nav>
+            </section>
+
+            <div class="save_plan">
+                <h3>Saved Meal Plans</h3>
+                <!-- Danh sách kế hoạch sẽ render -->
+            </div>
+
+            <div class="plan-editor">
+                <!-- Chi tiết plan sẽ render  -->
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="./js/saveMealPlan.js"></script>
+</body>
+</html>

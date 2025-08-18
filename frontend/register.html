@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="./css/sign-register.css" />
+    <link rel="shortcut icon" href="./image/logo/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="card">
+        <h2>Đăng ký</h2>
+        <input class="input" id="user_name" type="text" placeholder="Username" />
+        <input class="input" id="email" type="email" placeholder="Email" />
+        <input class="input" id="password" type="password" placeholder="Mật khẩu (≥6 ký tự)" />
+        <button class="btn btn-primary" id="registerBtn">
+            Tạo tài khoản
+        </button>
+        <a class="link" href="./signin.html">
+            Đã có tài khoản? Đăng nhập
+        </a>
+        <div class="error" id="error"></div>
+        <div class="success" id="success"></div>
+    </div>
+    <script type="module" src="./app.js"></script>
+</body>
+</html>

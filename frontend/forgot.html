@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quên mật khẩu</title>
+    <link rel="stylesheet" href="./css/sign-register.css" />
+    <link rel="shortcut icon" href="./image/logo/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="card">
+        <h2>Quên mật khẩu</h2>
+        <input class="input" id="email" type="email" placeholder="Nhập email đã đăng ký" />
+        <button class="btn btn-primary" id="forgotBtn">
+            Gửi email đặt lại
+        </button>
+        <a class="link" href="./signin.html">
+            ← Quay lại đăng nhập
+        </a>
+        <div class="error" id="error"></div>
+        <div class="success" id="success"></div>
+        <div class="small">
+            Sau khi nhận email, nhấp vào liên kết để về trang <code>reset.html</code> của bạn.
+        </div>
+    </div>
+    <script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="./css/sign-register.css" />
+    <link rel="shortcut icon" href="./image/logo/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        Firebase Auth Starter
+    </div>
+    <div class="card">
+    <h2>Đăng nhập</h2>
+    <input class="input" id="email" type="email" placeholder="Email" />
+    <input class="input" id="password" type="password" placeholder="Mật khẩu" />
+    <div class="actions">
+        <button class="btn btn-primary" id="loginBtn">
+            Đăng nhập
+        </button>
+        <button class="btn btn-secondary" id="logoutBtn">
+            Đăng xuất
+        </button>
+    </div>
+    <a class="link" href="./register.html">
+        Chưa có tài khoản? Đăng ký
+    </a>
+    <br/>
+    <a class="link" href="./forgot.html">
+        Quên mật khẩu?
+    </a>
+    <div class="error" id="error"></div>
+    <div class="success" id="success"></div>
+    <!-- <div class="small">Trạng thái: <span id="authState">Chưa đăng nhập</span></div>
+    <div class="small">User: <span id="userInfo">—</span></div> -->
+    </div>
+    <script type="module" src="./app.js"></script>
+</body>
+</html>

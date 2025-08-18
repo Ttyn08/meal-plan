@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Onboarding Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/set_profile.css">
+    <link rel="shortcut icon" href="./image/logo/favicon.ico" type="image/x-icon">
+
+    
+</head>
+<body class="bg-light">
+
+    <!-- Goals Screen -->
+    <div class="container onboarding-card active" id="goals-screen">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <button class="btn btn-link text-secondary back-arrow fs-5">&larr;</button>
+            <div class="logo fw-bold fs-5 text-dark">Foodorithm</div>
+            <span></span>
+        </div>
+
+        <div class="text-center mb-4">
+            <span class="text-muted progress-text">1/7</span>
+            <div class="progress mt-2" role="progressbar" aria-label="Progress">
+                <div class="progress-bar bg-primary progress-step-1"></div>
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+            <h1 class="fs-4 fw-bold">What are your goals?</h1>
+            <p class="text-muted">Select all that apply</p>
+        </div>
+
+        <div class="goals-grid">
+            <div class="goal-card" data-goal="lose-weight">
+                <span class="goal-icon">&#x1F525;</span>
+                <p class="m-0 text-dark">Lose weight</p>
+            </div>
+            <div class="goal-card" data-goal="build-muscle">
+                <span class="goal-icon">&#x1F4AA;</span>
+                <p class="m-0 text-dark">Build muscle</p>
+            </div>
+            <div class="goal-card" data-goal="increase-energy">
+                <span class="goal-icon">&#x26A1;</span>
+                <p class="m-0 text-dark">Increase energy</p>
+            </div>
+            <div class="goal-card" data-goal="improve-sleep">
+                <span class="goal-icon">&#x1F4A4;</span>
+                <p class="m-0 text-dark">Improve sleep</p>
+            </div>
+            <div class="goal-card" data-goal="manage-glucose">
+                <span class="goal-icon">&#x1F4A7;</span>
+                <p class="m-0 text-dark">Manage glucose</p>
+            </div>
+            <div class="goal-card" data-goal="be-healthier">
+                <span class="goal-icon">&#x2795;</span>
+                <p class="m-0 text-dark">Be healthier</p>
+            </div>
+        </div>
+
+        <button class="btn btn-primary w-100 py-3 mt-4 rounded-pill continue-button" data-screen-id="goals-screen">Continue</button>
+    </div>
+
+    <!-- Height Screen -->
+    <div class="container onboarding-card" id="height-screen">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <button class="btn btn-link text-secondary back-arrow fs-5">&larr;</button>
+            <div class="logo fw-bold fs-5 text-dark">Foodorithm</div>
+            <span></span>
+        </div>
+
+        <div class="text-center mb-4">
+            <span class="text-muted progress-text">2/7</span>
+            <div class="progress mt-2" role="progressbar" aria-label="Progress">
+                <div class="progress-bar bg-primary .progress-step-2"></div>
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+            <h1 class="fs-4 fw-bold">What is your height?</h1>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center gap-2 height-input-group">
+            <input type="number" class="form-control text-center height-input" value="170" placeholder="e.g. 180">
+            <div class="unit-toggle d-flex rounded-pill bg-light p-1">
+                <button class="btn unit-cm active">cm</button>
+                <button class="btn unit-in">in</button>
+            </div>
+        </div>
+
+        <p class="text-center text-secondary small mt-3">You can update your height at any time</p>
+
+        <div class="info-box mt-4">
+            <span class="info-box-icon">&#x2139;</span>
+            <p class="info-box-text m-0">Why do you need this information? To effectively calculate your calories, macros, and carb intake.</p>
+        </div>
+
+        <button class="btn btn-primary w-100 py-3 mt-4 rounded-pill continue-button" data-screen-id="height-screen">Continue</button>
+    </div>
+
+    <!-- Latest Weight Screen -->
+    <div class="container onboarding-card" id="latest-weight-screen">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <button class="btn btn-link text-secondary back-arrow fs-5">&larr;</button>
+            <div class="logo fw-bold fs-5 text-dark">Foodorithm</div>
+            <span></span>
+        </div>
+
+        <div class="text-center mb-4">
+            <span class="text-muted progress-text">3/7</span>
+            <div class="progress mt-2" role="progressbar" aria-label="Progress">
+                <div class="progress-bar bg-primary .progress-step-3"></div>
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+            <h1 class="fs-4 fw-bold">What's your latest weight?</h1>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center gap-2 weight-input-group">
+            <input type="number" class="form-control text-center weight-input" value="70" placeholder="e.g. 80">
+            <div class="unit-toggle d-flex rounded-pill bg-light p-1">
+                <button class="btn unit-kg active">kg</button>
+                <button class="btn unit-lb">lb</button>
+            </div>
+        </div>
+
+        <p class="text-center text-secondary small mt-3">You can update your weight at any time</p>
+
+        <div class="info-box mt-4">
+            <span class="info-box-icon">&#x2139;</span>
+            <p class="info-box-text m-0">Why do you need this information? To effectively calculate your calories, macros, and carb intake.</p>
+        </div>
+
+        <button class="btn btn-primary w-100 py-3 mt-4 rounded-pill continue-button" data-screen-id="latest-weight-screen">Continue</button>
+    </div>
+
+    <!-- Goal Weight Screen -->
+    <div class="container onboarding-card" id="goal-weight-screen">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <button class="btn btn-link text-secondary back-arrow fs-5">&larr;</button>
+            <div class="logo fw-bold fs-5 text-dark">Foodorithm</div>
+            <span></span>
+        </div>
+
+        <div class="text-center mb-4">
+            <span class="text-muted progress-text">4/7</span>
+            <div class="progress mt-2" role="progressbar" aria-label="Progress">
+                <div class="progress-bar bg-primary .progress-step-4"></div>
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+            <h1 class="fs-4 fw-bold">What's your goal weight?</h1>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center gap-2 weight-input-group">
+            <input type="number" class="form-control text-center goal-weight-input" value="65" placeholder="e.g. 80"">
+            <div class="unit-toggle d-flex rounded-pill bg-light p-1">
+                <button class="btn unit-kg active">kg</button>
+                <button class="btn unit-lb">lb</button>
+            </div>
+        </div>
+
+        <p class="text-center text-secondary small mt-3">You can update your weight at any time</p>
+
+        <div class="info-box mt-4">
+            <span class="info-box-icon">&#x2139;</span>
+            <p class="info-box-text m-0">Why do you need this information? To effectively calculate your calories, macros, and carb intake.</p>
+        </div>
+
+        <button class="btn btn-primary w-100 py-3 mt-4 rounded-pill continue-button" data-screen-id="goal-weight-screen">Continue</button>
+    </div>
+
+    <!-- Gender Screen -->
+    <div class="container onboarding-card" id="sex-screen">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <button class="btn btn-link text-secondary back-arrow fs-5">&larr;</button>
+            <div class="logo fw-bold fs-5 text-dark">Foodorithm</div>
+            <span></span>
+        </div>
+
+        <div class="text-center mb-4">
+            <span class="text-muted progress-text">5/7</span>
+            <div class="progress mt-2" role="progressbar" aria-label="Progress">
+                <div class="progress-bar bg-primary .progress-step-5"></div>
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+            <h1 class="fs-4 fw-bold">What's your biological gender?</h1>
+        </div>
+
+        <div class="d-flex justify-content-center gap-4 sex-selection-grid">
+            <div class="sex-card" data-sex="male">
+                <span class="sex-icon">&#x2642;</span>
+                <p class="m-0 text-dark">Male</p>
+                <div class="checkmark-circle">
+                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+                </div>
+            </div>
+            <div class="sex-card" data-sex="female">
+                <span class="sex-icon">&#x2640;</span>
+                <p class="m-0 text-dark">Female</p>
+                <div class="checkmark-circle">
+                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box mt-4">
+            <span class="info-box-icon">&#x2139;</span>
+            <p class="info-box-text m-0">Why do you need this information? To effectively calculate your calories, macros, and carb intake.</p>
+        </div>
+
+        <button class="btn btn-primary w-100 py-3 mt-4 rounded-pill continue-button" data-screen-id="sex-screen">Continue</button>
+    </div>
+
+    <!-- Birthday Screen -->
+    <div class="container onboarding-card" id="birthday-screen">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <button class="btn btn-link text-secondary back-arrow fs-5">&larr;</button>
+            <div class="logo fw-bold fs-5 text-dark">Foodorithm</div>
+            <span></span>
+        </div>
+
+        <div class="text-center mb-4">
+            <span class="text-muted progress-text">6/7</span>
+            <div class="progress mt-2" role="progressbar" aria-label="Progress">
+                <div class="progress-bar bg-primary .progress-step-6"></div>
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+            <h1 class="fs-4 fw-bold">When's your birthday?</h1>
+        </div>
+
+        <div class="d-flex gap-2 justify-content-center birthday-input-group">
+            <label for="day-select" class="visually-hidden">Day</label>
+            <select id="day-select" class="form-select text-center" title="Chọn ngày sinh của bạn">
+                <option value="">Day</option>
+            </select>
+
+            <label for="month-select" class="visually-hidden">Month</label>
+            <select id="month-select" class="form-select text-center" title="Chọn tháng sinh của bạn">
+                <option value="">Month</option>
+            </select>
+
+            <label for="year-select" class="visually-hidden">Year</label>
+            <select id="year-select" class="form-select text-center" title="Chọn năm sinh của bạn">
+                <option value="">Year</option>
+            </select>
+        </div>
+
+        <div class="info-box mt-4">
+            <span class="info-box-icon">&#x2139;</span>
+            <p class="info-box-text m-0">Why do you need this information? To effectively calculate your calories, macros, and carb intake.</p>
+        </div>
+
+        <button class="btn btn-primary w-100 py-3 mt-4 rounded-pill continue-button" data-screen-id="birthday-screen">Continue</button>
+    </div>
+
+    <!-- Activity Screen -->
+    <div class="container onboarding-card" id="activity-screen">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <button class="btn btn-link text-secondary back-arrow fs-5">&larr;</button>
+            <div class="logo fw-bold fs-5 text-dark">Foodorithm</div>
+            <span></span>
+        </div>
+
+        <div class="text-center mb-4">
+            <span class="text-muted progress-text">7/7</span>
+            <div class="progress mt-2" role="progressbar" aria-label="Progress">
+                <div class="progress-bar bg-primary .progress-step-7"></div>
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+            <h1 class="fs-4 fw-bold">How active are you?</h1>
+            <p class="text-muted">Don't worry, you can easily change your profile later</p>
+        </div>
+
+        <div class="d-flex flex-column gap-3 activity-selection-list">
+            <div class="activity-card" data-activity="sedentary">
+                <div class="text-content">
+                    <h3 class="m-0">Sedentary</h3>
+                    <p class="m-0">Little to no exercise. Spend most of the day seated.</p>
+                </div>
+                <div class="checkmark-circle">
+                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+                </div>
+            </div>
+            <div class="activity-card" data-activity="lightly-active">
+                <div class="text-content">
+                    <h3 class="m-0">Lightly Active</h3>
+                    <p class="m-0">Light exercise for 30 minutes per day, 3 to 5 times a week.</p>
+                </div>
+                <div class="checkmark-circle">
+                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+                </div>
+            </div>
+            <div class="activity-card" data-activity="moderately-active">
+                <div class="text-content">
+                    <h3 class="m-0">Moderately Active</h3>
+                    <p class="m-0">Moderate exercise for 1 hour per day, 3 to 5 times a week.</p>
+                </div>
+                <div class="checkmark-circle">
+                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+                </div>
+            </div>
+            <div class="activity-card" data-activity="very-active">
+                <div class="text-content">
+                    <h3 class="m-0">Very Active</h3>
+                    <p class="m-0">Intense exercise for 1 hour per day, 5-7 times a week.</p>
+                </div>
+                <div class="checkmark-circle">
+                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+                </div>
+            </div>
+            <div class="activity-card" data-activity="extra-active">
+                <div class="text-content">
+                    <h3 class="m-0">Extra Active</h3>
+                    <p class="m-0">Intense exercise for at least 2 hours every day.</p>
+                </div>
+                <div class="checkmark-circle">
+                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary w-100 py-3 mt-4 rounded-pill continue-button create-plan-button" data-screen-id="activity-screen">Save my profile</button>
+    </div>
+
+    <!-- Results Modal (hidden by default) -->
+    <!-- <div id="results-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 p-4 text-center">
+                <div class="modal-header border-0 pb-0 d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <h2 class="fs-4 fw-bold mb-3">Your Profile Summary</h2>
+                    <div id="results-content" class="text-start text-muted">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="results-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 p-4 text-center">
+                <div class="modal-header border-0 pb-0 d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <h2 class="fs-4 fw-bold mb-3">Your Profile Summary</h2>
+                    <div id="results-content" class="text-start text-muted">
+                        </div>
+                </div>
+                <div class="modal-footer border-0 pt-0 d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" id="saveProfileBtnInModal">Lưu Hồ Sơ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/set_profile.js"></script>
+</body>
+</html>
